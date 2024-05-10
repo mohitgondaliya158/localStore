@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-offlineStore" version="1.0.0"
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>OfflineStore</name>
+	<js-module name="OfflineStore" src="www/OfflineStore.js">
+		<clobbers target="OfflineStore" />
+	</js-module>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="OfflineStore">
+				<param name="ios-package" value="OfflineStore" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/OfflineStore.m" />
+	</platform>
+</plugin>
